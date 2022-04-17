@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0091)https://106.39.79.80/por/login_psw.csp?rnd=0.8584096283717026#https%3A%2F%2F106.39.79.80%2F -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 旧方案 >
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<! 旧方案 -->
+
+<title>Welcome</title>
+<link href="./下载EasyConnect_files/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+window.tmlversion = 6.8;	//版本号
+</script>
+
+<!-- 新方案 -->
+<script src="./下载EasyConnect_files/common.min.js"></script><script src="./下载EasyConnect_files/language.en_US.json" type="text/javascript"></script>
+<script src="./下载EasyConnect_files/login.min.js"></script>
+<!-- 新方案 -->
+
+<!-- 旧方案 >
+<script src="../com/common.js"></script>
+<script src="../com/component.js"></script>
+<script src="../com/Login.js"></script>
+<! 旧方案 -->
+
+<script type="text/javascript">
+window.client = {
+	EncryptExp:			'65537',
+	EnableResetPsw:		'1',
+	EnableKeypad:		'0',
+	showSetup:			'0',
+	showSvpntool:		'1',
+	showHelpCenter:		'1',
+	EnableDKeyVer:		'0',
+	EnableRandCode:		'0',
+	EnableAnonymous:	'0',
+	denyNormalAccess:	'0',
+	EnableMidAtkCheck:	'0',
+	EncryptKey:			'C11D2D8C6E711490F8B2BE5467E4F4A403D6CFF8A45425D6F2719D1F3EBE2EA792D4186D30A94AAD17606A75926DB36190AABF1BC088E7BB334CA731AC653E099821AB447C647CDC30C631B0ED833C15289639678CCAE8A45CCD0AF14E5CE497F8C2929C820A6648DA856C1EA2A74BED47DFC350C71A81994A63A843A0C02D2F9703E5E9013FACB98C40DDFF9E070EF5398F0DD0D0C54818CECB488043325F6521BE28AEA40069749A6C0AC864675F8847BA2F0243AFAEF026667EF99D5AE357E3157936ECF1B12B3C8F23CFA47BD3052D85088B8B910D6FD57F631BC1C33B3BA691E979DD3FC6FE232F97C2BC46D3E133E12A8698405A4BDB7F8A1C6BC780CB',
+	EnableMultClient:   '1',     //是否开启多客户端  M7.1R1
+	MultClientGuid:     '48D7F7001506478405',          //开启多客户端后的GUID  M7.1R1
+	IsMultclientVersion: '1',    //是否是多客户端VPN版本。
+	UnforceInstallClient:'0',   //不强制安装客户端
+	N_INPUTNAME:		'svpn_name',
+	N_INPUTPASS:		'svpn_password',
+	N_HIDEBUTTONS:		'false',
+	N_BUTTONNAME:		'logButton',
+	N_ANONYBUTTONNAME:	'anonyButton',
+	N_INPUTRAND:		'p_rand_code',
+	N_LOGFORM:			'formLogin',
+	N_COMPLAYER:		'ComLayer',	
+	N_DKEYTIPS:			'DkeyTips',
+	N_SIGNINBYCERT:		'log0',
+	N_SIGNINBYDKEY:		'log1',
+	N_RANDCODEIMG:		'randcodeImg',
+	N_MACSYSTEM:		'MacSystem',
+	content:{
+		"NORMAL_LOGIN": tr("登 录"),
+		"ANONYMOUS_LOGIN": tr("匿名登录"),
+		"ANONYMOUS_USER": "Anonymous",
+		"NEED_USERNAME": tr("请输入用户名,否则无法登录"),
+		"INVALID_USER": tr("不合法的用户名,用户名不能超过72个字节"), 
+		"NEED_RANDCODE": tr("校验码不能为空!"),
+		"LOGING": tr("正在检测登录信息...")
+	}
+};
+
+var errorMsg = '';
+</script>
+
+<script id="EA_cb10000" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource"></script><script id="EA_cb10001" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource(1)"></script><script id="EA_cb10002" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource(2)"></script><script id="EA_cb10003" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource(3)"></script><style>.crx_bdwk_down_wrap {
+    top: 70%;
+    left: 0;
+    position: fixed;
+    z-index: 99999999;
+    color: #fff;
+    user-select: none;
+}
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
+        background-color: #666;
+        cursor: wait;
+        width: 126px;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
+            font-size: 14px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
+            font-size: 10px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
+        width: 126px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #dd5a57;
+        position: relative;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: #666;
+        font-size: 12px;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
+            position: relative;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
+                content: ' ';
+                height: 12px;
+                width: 1px;
+                background-color: #eee;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                transform: scaleX(0.5);
+            }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
+                    display: none;
+                }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
+            flex: 1;
+            color: #dd5a57;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
+            flex: 1;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: lighter;
+        }
+</style><script id="EA_cb10004" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource(4)"></script><script id="EA_cb10005" type="text/javascript" async="" src="./下载EasyConnect_files/saved_resource(5)"></script></head>
+
+<body class=" en_US">
+<span id="titleInnerHTML" style="display: none;">欢迎访问</span>
+<div class="banners" style="background-color:;">
+	<ul style="background-image: url(/por/images/default_logo.gif);">
+		<li id="language" class="language" style="">
+			<a id="zh_CN" href="javascript:toLang(&#39;zh_CN&#39;)" class="zh_CN_enable">简体中文</a>
+			<a id="en_US" class="en_US_disable">English</a>
+		</li>
+	</ul>
+</div>
+<div class="content">
+	<div class="title" _html="登录">Login</div>
+	<form id="formLogin" name="formLogin" method="post" action="https://106.39.79.80/por/login_psw.csp?sfrnd=2346912324982305" onsubmit="return formSubmit();">
+		<input type="hidden" name="mitm_result" id="txtMITEMAttack">
+        <input type="hidden" name="svpn_req_randcode" id="svpn_req_randcode" value="3515">
+		<div id="form">
+			<dl class="input_text">
+				<dt></dt>
+				<dd>
+					<span style="width:240px; position:relative">
+						<label default_txt="用户名" forid="svpn_name" id="label_user" _html="用户名">Username</label>
+						<span class="span_opacity"></span><!--need to label-->
+						<input id="svpn_name" name="svpn_name" value="" type="text" maxlength="49" autocomplete="off">
+					</span>
+				</dd>
+			</dl>
+			<dl class="input_text psw_cls">
+				<dt></dt>
+				<dd class="keyboard">
+					<span style="width:240px;position:relative">
+						<label default_txt="密　码" forid="svpn_password" id="label_psw" _html="密　码">Password</label>
+						<span class="span_opacity"></span><!--need to label-->
+						<input type="password" style="display:none;"> <!-- 增加一隐藏的input，让浏览器不自动进行填充 勿删 add by hcz-->
+						<input id="svpn_password" name="svpn_password" value="" type="password" maxlength="48" autocomplete="off" style=" font-family:Verdana">
+					</span>
+					
+					<a id="resetpsw" style="" href="https://106.39.79.80/com/forgetPassword.html" _html="忘记密码了？">Forgot Password?</a>
+				</dd>
+			</dl>
+			<dl id="p_rand_code" class="input_text" style="display: none">
+				<dt></dt>
+				<dd>
+					<span style="width:65px;position:relative">
+						<label default_txt="验证码" forid="randcode" id="label_code" _html="验证码">Verification</label>
+						<span class="span_opacity" style="width:65px;"></span><!--need to label-->
+						<input id="randcode" name="svpn_rand_code" value="" type="text">
+					</span>
+				</dd>
+				<dd><img id="randcodeImg" width="77" height="24"></dd>
+				<dd><a href="https://106.39.79.80/por/login_psw.csp?rnd=0.8584096283717026#" onclick="ChangeRandCode()" _html="看不清楚？换一个">Change another</a></dd>
+			</dl>
+			<dl style="display: none;">
+				<dt></dt>
+				<dd id="tipsContent" class="tip_error"></dd>
+			</dl>
+			<dl class="buttons">
+				<dt></dt>
+				<dd>
+					<button id="logButton" type="submit" onfocus="closeSoftKb()" class="button_normal"></button>
+				</dd>
+				<dd>
+					<button id="anonyButton" class="button_anonymity" style="display:none;" type="button" onclick="$ID(&#39;label_user&#39;).innerHTML=&#39; &#39;;anonymousLogin()"></button>
+				</dd>
+			</dl>
+			<dl class="else_login" id="loginTypes">
+				<dt></dt>
+				<dd>
+					<p _html="其它登录方式：" style="color:#666666">Other Login Method:</p>
+					<div>
+						<span class="button_two" id="log0"><a class="certificate" href="javascript:CertLogin();" _html="证书登录">Use Certificate</a></span>
+						<span class="button_two" id="log1" style="display: none;"><a class="USB_KEY" href="javascript: if(!checkReLoginEx()){HandleDkey()};" _html="USB-Key登录">Use USB Key</a></span>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</form>
+	<div class="other_info">
+		<ul>
+			<li class="drive" id="DkeyTips" style="display: none;" _html="读取USB-KEY 失败，请手动 {0}安装驱动{1}" _htmlformatargs="DkeyTipsFormatArgs">Failed to read USB key. Please <a href="javascript:onInstall(client.EnableDKeyVer)">install USB key driver</a>.</li>
+			<li id="ComLayer" style="display: none;" _html="自动安装组件失败，请手动 {0}下载安装组件{1}" _htmlformatargs="ComLayerFormatArgs">Failed to install components automatically. Please <a href="javascript:onInstall(INST_COMP)">download components</a>.</li>
+			<li id="MacSystem" style="display: none;" _html="请手动 {0}下载安装组件{1}" _htmlformatargs="MacSystemFormatArgs">Please <a href="javascript:onInstall(INST_MAC)">download components</a>.</li>
+			<li id="SangforTool" style="display: none;" _html="登录异常，请下载修复工具 {0}尝试修复{1}" _htmlformatargs="SangforToolFormatArgs">Login error. Please download SSL VPN repair tool to <a href="https://106.39.79.80/com/win/svpntool.zip">repair components</a>.</li>
+			<li id="iPadClient" style="display: none;"><a href="https://106.39.79.80/por/login_psw.csp?rnd=0.8584096283717026#" target="_blank"></a></li>
+			<li id="helper" style="display: none;" _html="需要更多帮助信息，请 {0}点击这里{1}" _htmlformatargs="HelperFormatArgs">For more help information, <a href="javascript:HelpCenter()">click here</a></li>
+		</ul>
+	</div>
+</div>
+<div id="keyborad" class="keypad">
+	
+</div>
+<script type="text/javascript">
+
+(function(){
+	var labels = ["label_user","label_psw","label_code"];
+	for(var i = 0;i<labels.length;i++)
+	{
+		var label = $ID(labels[i]);
+		var input = $ID(label.getAttribute("forid"));
+		addEvent(input,"keyup",handleInputVm);
+		addEvent(input,"keydown",handleInputVm);
+		addEvent(input,"focus",handleInputVm);
+		addEvent(input,"input",handleInputVm);
+	}
+
+	function handleInputVm()
+	{
+		for(var i = 0;i<labels.length;i++)
+		{
+			var label = $ID(labels[i]);
+			var inputId = label.getAttribute("forid");
+			if(this.id == inputId)
+			{
+				label.innerHTML=this.value?"&nbsp;":tr(label.getAttribute("default_txt"));
+				break;
+			}
+		}
+	}
+})();
+
+window.setLang({
+	'DkeyTipsFormatArgs' : ['<a href="javascript:onInstall(client.EnableDKeyVer)">', '</a>'],
+	'ComLayerFormatArgs': ['<a href="javascript:onInstall(INST_COMP)">', '</a>'],
+	'SangforToolFormatArgs': ['<a href="/com/win/svpntool.zip">', '</a>'],
+	'HelperFormatArgs': ['<a href="javascript:HelpCenter()">', '</a>'],
+	'MacSystemFormatArgs': ['<a href="javascript:onInstall(INST_MAC)">', '</a>']
+});
+
+</script>
+
+
+</body></html>
